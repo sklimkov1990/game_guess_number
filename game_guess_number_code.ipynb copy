@@ -1,0 +1,104 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from random import randint"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "numToGuess = randint(1, 10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "attempts = 0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "name = input(\"What is your name? \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"enter in 'quit' to exit the game\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "while(True):\n",
+    "    userGuess = input(\"What is my number? \")\n",
+    "    \n",
+    "    attempts += 1\n",
+    "    \n",
+    "    if (userGuess == 'quit'):\n",
+    "        print(numToGuess)\n",
+    "        break\n",
+    "    elif (userGuess == str(numToGuess)):\n",
+    "        print(\"Congratulations, \" + name + \", you guessed my number(\" + str(numToGuess) + \")! It only took you \" \n",
+    "              + str(attempts) + \" tries!\")\n",
+    "        break\n",
+    "    \n",
+    "    if (numToGuess -2 < int(userGuess) < numToGuess + 2):\n",
+    "        print(\"Hot!\")\n",
+    "    elif (numToGuess - 4 <= int(userGuess) < numToGuess + 4):\n",
+    "        print(\"Warm\")\n",
+    "    elif (numToGuess + 4 <= int(userGuess) <= numToGuess + 4):\n",
+    "        print(\"Warm\")\n",
+    "    else:\n",
+    "        print(\"Little chilly\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "PythonData",
+   "language": "python",
+   "name": "pythondata"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
